@@ -1,20 +1,53 @@
 package com.springboot.lawfirmapi.entity;
 
+
+import javax.persistence.*;
+
+//Employee Entity
+@Entity //This will let Java know that this is an entity that we are going to map to a database table.
+@Table(name = "law_firm") //This is for the actual name of the database table we are mapping to the class.
+
+    //Define fields
 public class LawFirm {
 
     //Fields
+    @Id //This will map the primary key.
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //This will auto increment your primary key
+    @Column(name = "firm_id") //This is mapping the primary key to the id column in the table.
     private int firmId;
+
+    @Column(name = "firm_reg_number")
     private int firmRegNumber;
+
+    @Column(name = "first_name")
     private String firmName;
+
+    @Column(name = "firm_address")
     private String firmAddress;
+
+    @Column(name = "state")
     private String state;
+
+    @Column(name ="firm_category" )
     private String firmCategory;
+
+    @Column(name ="open_hr")
     private String openHr;
+
+    @Column(name = "close_hr")
     private String closeHr;
+
+    @Column(name = "firm_email")
     private String firmEmail;
+
+    @Column(name = "firm_contact_no")
     private String firmContactNo;
 
-    //Constructors
+    //Default Constructor
+    public LawFirm(){
+
+    }
+    //Para Constructors
 
     public LawFirm(int firmId, int firmRegNumber, String firmName,
                    String firmAddress, String state, String firmCategory,

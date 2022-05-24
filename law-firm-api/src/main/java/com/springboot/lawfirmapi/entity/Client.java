@@ -2,31 +2,48 @@ package com.springboot.lawfirmapi.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "client")
 public class Client {
 
     //Fields
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
 
+    @Column(name = "client_name")
     private String clientName;
 
+    @Column(name = "firm_category")
     private String firmCategory;
 
+    @Column(name = "email")
     private String email;
 
+    @Column(name = "gender")
     private String gender;
 
+    @Column(name = "city")
     private String city;
 
+    @Column(name = "state")
     private String state;
 
+    @Column(name = "country")
     private String country;
 
+    @Column(name = "zip_code")
     private String zipCode;
 
 
-    //Constructor
+    //Default Constructor
+    public Client(){
 
-
+    }
+//Para Constructor
     public Client(int id, String clientName, String firmCategory,
                   String email, String gender, String city, String state,
                   String country, String zipCode) {
