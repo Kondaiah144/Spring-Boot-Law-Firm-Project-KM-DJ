@@ -3,9 +3,11 @@ package com.springboot.lawfirmapi.service;
 import com.springboot.lawfirmapi.dao.LawFirmDAO;
 import com.springboot.lawfirmapi.entity.LawFirm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class LawFirmServiceIMPL implements LawFirmService{
 
     //Injecting the LawFirm dao layer

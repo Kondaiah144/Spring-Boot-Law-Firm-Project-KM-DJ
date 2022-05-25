@@ -19,7 +19,7 @@ public class LawFirm {
     @Column(name = "firm_reg_number")
     private int firmRegNumber;
 
-    @Column(name = "first_name")
+    @Column(name = "firm_name")
     private String firmName;
 
     @Column(name = "firm_address")

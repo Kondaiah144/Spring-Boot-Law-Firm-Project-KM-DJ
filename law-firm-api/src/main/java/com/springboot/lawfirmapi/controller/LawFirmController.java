@@ -25,14 +25,14 @@ public class LawFirmController {
     }
 
     //This is a GET request that will read a list of all the law-firm.
-    //http://localhost:8080/retrieveAllLawFirm
+    //http://localhost:8081/retrieveAllLawFirm
     @GetMapping("/retrieveAllLawFirm")
     public List<LawFirm> findAll() {
         return lawFirmService.findAll();
     }
 
     //This is a POST request to add a new law-firm
-    //http://localhost:8080/addLawFirm
+    //http://localhost:8081/addLawFirm
     @PostMapping("/addLawFirm")
     public LawFirm addLawFirm(@RequestBody LawFirm theLawFirm) {
         //also, just in case they pass an id in JSON .... set id to 0
@@ -46,7 +46,7 @@ public class LawFirmController {
     }
 
     //This is a PUT request to update an existing law-firm.
-    //http://localhost:8080/updateLawFirm
+    //http://localhost:8081/updateLawFirm
     @PutMapping("/updateLawFirm")
     public LawFirm updateLawFirm(@RequestBody LawFirm updateLawFirm) {
         //Notice theLawFirm.setId(0); this will execute an update instead of a create
@@ -55,7 +55,7 @@ public class LawFirmController {
     }
 
     //This is a DELETE request to delete an existing law-firm.
-    //http://localhost:8080/deleteLawFirm/1
+    //http://localhost:8081/deleteLawFirm/1
     @DeleteMapping("/deleteLawFirm/{lawFirmId}")
     public String deleteLawFirm(@PathVariable int lawFirmId) {
         //This will execute the deleteByID.

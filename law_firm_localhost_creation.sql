@@ -1,6 +1,6 @@
-CREATE USER 'lawFirmRegistry'@'localhost' IDENTIFIED BY 'lawFirmRegistry';
+CREATE USER 'law_firm_registry'@'localhost' IDENTIFIED BY 'law_firm_registry';
 
-GRANT ALL PRIVILEGES ON * . * TO 'lawFirmRegistry'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'law_firm_registry'@'localhost';
 #
 # Starting with MySQL 8.0.4, the MySQL team changed the 
 # default authentication plugin for MySQL server 
@@ -11,4 +11,4 @@ GRANT ALL PRIVILEGES ON * . * TO 'lawFirmRegistry'@'localhost';
 # See the MySQL Reference Manual for details: 
 # https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html
 #
-ALTER USER 'lawFirmRegistry'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin';
+ALTER USER 'law_firm_registry'@'localhost' IDENTIFIED WITH mysql_native_password BY '0144';
