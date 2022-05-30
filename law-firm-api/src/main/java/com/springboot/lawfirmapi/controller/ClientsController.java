@@ -32,7 +32,7 @@ public class ClientsController {
     public String loginClients(@ModelAttribute ("clients") Clients clients) {
 
         String clientsId=clients.getClientId();
-        Optional<Clients> clientsdata = repository.findById(clientsId);
+        Optional<Clients> clientsdata = repository.findByClientId(clientsId);
 
         if(clients.getPassword().equals(clientsdata.get().getPassword())){
            return "home";
