@@ -21,12 +21,12 @@ public class LawFirmsManagementController {
         private LawFirmsManagementRepository repo;
 
 
-        @GetMapping("/")
-        public String login(Model model){
+        @GetMapping("/lawFirmsManagement")
+        public String lawFirmLogin(Model model){
             LawFirmsManagement lawFirmsManagement = new LawFirmsManagement();
             model.addAttribute("lawFirmsManagement", lawFirmsManagement);
 
-            return "login";
+            return "lawFirmLogin";
         }
 
         @PostMapping("/lawFirmsManagementLogin")
@@ -36,10 +36,10 @@ public class LawFirmsManagementController {
             Optional<LawFirmsManagement> lawFirmsManagementdata = repo.findByFirmRegNumber(firmRegNumber);
 
             if(lawFirmsManagement.getPassword().equals(lawFirmsManagementdata.get().getPassword())){
-                return "home";
+                return "lawfirmhome";
             }
             else{
-                return "error";
+                return "lawfirmerror";
             }
         }
 
